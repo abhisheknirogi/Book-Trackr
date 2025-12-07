@@ -24,3 +24,10 @@ export function updateBook(updatedBook) {
 export function getBookById(id) {
   return getBooks().find(book => book.id === id);
 }
+
+// ✅ NEW — remove a book by ID
+export function removeBook(id) {
+  const books = getBooks();
+  const updated = books.filter(book => book.id !== id);
+  localStorage.setItem(BOOKS_KEY, JSON.stringify(updated));
+}
