@@ -1,9 +1,13 @@
 export default function Navbar() {
-  const nav = document.createElement("nav");
-  nav.className = "p-4 bg-black text-white";
-  nav.innerHTML = `
-    <a href="/">Home</a>
-    <a href="/add-book">Add Book</a>
+  return `
+    <nav class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-4 flex justify-between items-center shadow-md sticky top-0 z-50">
+      <div class="font-bold text-xl flex items-center gap-2">
+         Book Trackr
+      </div>
+      <div class="space-x-6">
+        <a href="/" data-link class="hover:underline">Home</a>
+        <a href="/add" data-link class="hover:underline">Add Book</a>
+      </div>
+    </nav>
   `;
-  return nav;
 }

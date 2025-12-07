@@ -1,6 +1,10 @@
-module.exports = {
-  content: ["./index.html", "./src/**/*.{js}"],
-  darkMode: "class",
-  theme: { extend: {} },
-  plugins: []
-};
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts}"
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
