@@ -12,9 +12,14 @@ function render(html, callback) {
 }
 
 export function initRouter() {
-  page("/", async () => render(await Home(), Home.attachEvents));
-  page("/add", async () => render(await AddBook(), AddBook.attachEvents));
-  page("/book/:id", async (ctx) => render(await BookDetails(ctx)));
+  page("/", () => render(Home(), Home.attachEvents));
+  page("/add", () => render(AddBook(), AddBook.attachEvents));
+
+  // Book details with ctx passed to attachEvents
+  page("/book/:id", (ctx) =>
+    render(BookDetails(ctx), () => BookDetails.attachEvents(ctx))
+  );
+
   page("*", () => render(NotFound(), NotFound.attachEvents));
 
   page();

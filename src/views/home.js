@@ -2,7 +2,7 @@
 import { getBooks } from "../utils/storage.js";
 import page from "page";
 
-export default async function Home() {
+export default function Home() {
   const books = getBooks();
 
   return `
