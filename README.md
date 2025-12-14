@@ -74,7 +74,8 @@ Open it in your browser to use the app
 bash
 Copy code
 npm test
-🎯 Learning Objectives
+
+## 🎯 Learning Objectives
 Modular ES6+ JavaScript development
 
 Client-side routing
@@ -87,7 +88,7 @@ Using modern build tools (Vite)
 
 Structuring scalable frontend projects
 
-🔮 Future Enhancements
+## 🔮 Future Enhancements
 User authentication (login/signup)
 
 Reading progress tracker (pages/percentage)
@@ -97,3 +98,4 @@ Notes and highlights per book
 Dark mode and theming
 
 Cloud database integration
+
